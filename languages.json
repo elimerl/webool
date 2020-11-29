@@ -1,0 +1,673 @@
+{
+    "plaintext": {
+        "aliases": [
+            "Plain Text",
+            "text"
+        ],
+        "extensions": [
+            ".txt",
+            ".gitignore"
+        ]
+    },
+    "json": {
+        "aliases": [
+            "JSON",
+            "json"
+        ],
+        "extensions": [
+            ".json",
+            ".bowerrc",
+            ".jshintrc",
+            ".jscsrc",
+            ".eslintrc",
+            ".babelrc",
+            ".har"
+        ]
+    },
+    "abap": {
+        "aliases": [
+            "abap",
+            "ABAP"
+        ],
+        "extensions": [
+            ".abap"
+        ]
+    },
+    "apex": {
+        "aliases": [
+            "Apex",
+            "apex"
+        ],
+        "extensions": [
+            ".cls"
+        ]
+    },
+    "azcli": {
+        "aliases": [
+            "Azure CLI",
+            "azcli"
+        ],
+        "extensions": [
+            ".azcli"
+        ]
+    },
+    "bat": {
+        "aliases": [
+            "Batch",
+            "bat"
+        ],
+        "extensions": [
+            ".bat",
+            ".cmd"
+        ]
+    },
+    "cameligo": {
+        "aliases": [
+            "Cameligo"
+        ],
+        "extensions": [
+            ".mligo"
+        ]
+    },
+    "clojure": {
+        "aliases": [
+            "clojure",
+            "Clojure"
+        ],
+        "extensions": [
+            ".clj",
+            ".cljs",
+            ".cljc",
+            ".edn"
+        ]
+    },
+    "coffeescript": {
+        "aliases": [
+            "CoffeeScript",
+            "coffeescript",
+            "coffee"
+        ],
+        "extensions": [
+            ".coffee"
+        ]
+    },
+    "c": {
+        "aliases": [
+            "C",
+            "c"
+        ],
+        "extensions": [
+            ".c",
+            ".h"
+        ]
+    },
+    "cpp": {
+        "aliases": [
+            "C++",
+            "Cpp",
+            "cpp"
+        ],
+        "extensions": [
+            ".cpp",
+            ".cc",
+            ".cxx",
+            ".hpp",
+            ".hh",
+            ".hxx"
+        ]
+    },
+    "csharp": {
+        "aliases": [
+            "C#",
+            "csharp"
+        ],
+        "extensions": [
+            ".cs",
+            ".csx",
+            ".cake"
+        ]
+    },
+    "csp": {
+        "aliases": [
+            "CSP",
+            "csp"
+        ],
+        "extensions": []
+    },
+    "css": {
+        "aliases": [
+            "CSS",
+            "css"
+        ],
+        "extensions": [
+            ".css"
+        ]
+    },
+    "dockerfile": {
+        "aliases": [
+            "Dockerfile"
+        ],
+        "extensions": [
+            ".dockerfile"
+        ]
+    },
+    "fsharp": {
+        "aliases": [
+            "F#",
+            "FSharp",
+            "fsharp"
+        ],
+        "extensions": [
+            ".fs",
+            ".fsi",
+            ".ml",
+            ".mli",
+            ".fsx",
+            ".fsscript"
+        ]
+    },
+    "go": {
+        "aliases": [
+            "Go"
+        ],
+        "extensions": [
+            ".go"
+        ]
+    },
+    "graphql": {
+        "aliases": [
+            "GraphQL",
+            "graphql",
+            "gql"
+        ],
+        "extensions": [
+            ".graphql",
+            ".gql"
+        ]
+    },
+    "handlebars": {
+        "aliases": [
+            "Handlebars",
+            "handlebars"
+        ],
+        "extensions": [
+            ".handlebars",
+            ".hbs"
+        ]
+    },
+    "html": {
+        "aliases": [
+            "HTML",
+            "htm",
+            "html",
+            "xhtml"
+        ],
+        "extensions": [
+            ".html",
+            ".htm",
+            ".shtml",
+            ".xhtml",
+            ".mdoc",
+            ".jsp",
+            ".asp",
+            ".aspx",
+            ".jshtm"
+        ]
+    },
+    "ini": {
+        "aliases": [
+            "Ini",
+            "ini"
+        ],
+        "extensions": [
+            ".ini",
+            ".properties",
+            ".gitconfig"
+        ]
+    },
+    "java": {
+        "aliases": [
+            "Java",
+            "java"
+        ],
+        "extensions": [
+            ".java",
+            ".jav"
+        ]
+    },
+    "javascript": {
+        "aliases": [
+            "JavaScript",
+            "javascript",
+            "js"
+        ],
+        "extensions": [
+            ".js",
+            ".es6",
+            ".jsx"
+        ]
+    },
+    "kotlin": {
+        "aliases": [
+            "Kotlin",
+            "kotlin"
+        ],
+        "extensions": [
+            ".kt"
+        ]
+    },
+    "less": {
+        "aliases": [
+            "Less",
+            "less"
+        ],
+        "extensions": [
+            ".less"
+        ]
+    },
+    "lua": {
+        "aliases": [
+            "Lua",
+            "lua"
+        ],
+        "extensions": [
+            ".lua"
+        ]
+    },
+    "markdown": {
+        "aliases": [
+            "Markdown",
+            "markdown"
+        ],
+        "extensions": [
+            ".md",
+            ".markdown",
+            ".mdown",
+            ".mkdn",
+            ".mkd",
+            ".mdwn",
+            ".mdtxt",
+            ".mdtext"
+        ]
+    },
+    "mips": {
+        "aliases": [
+            "MIPS",
+            "MIPS-V"
+        ],
+        "extensions": [
+            ".s"
+        ]
+    },
+    "msdax": {
+        "aliases": [
+            "DAX",
+            "MSDAX"
+        ],
+        "extensions": [
+            ".dax",
+            ".msdax"
+        ]
+    },
+    "mysql": {
+        "aliases": [
+            "MySQL",
+            "mysql"
+        ],
+        "extensions": []
+    },
+    "objective-c": {
+        "aliases": [
+            "Objective-C"
+        ],
+        "extensions": [
+            ".m"
+        ]
+    },
+    "pascal": {
+        "aliases": [
+            "Pascal",
+            "pas"
+        ],
+        "extensions": [
+            ".pas",
+            ".p",
+            ".pp"
+        ]
+    },
+    "pascaligo": {
+        "aliases": [
+            "Pascaligo",
+            "ligo"
+        ],
+        "extensions": [
+            ".ligo"
+        ]
+    },
+    "perl": {
+        "aliases": [
+            "Perl",
+            "pl"
+        ],
+        "extensions": [
+            ".pl"
+        ]
+    },
+    "pgsql": {
+        "aliases": [
+            "PostgreSQL",
+            "postgres",
+            "pg",
+            "postgre"
+        ],
+        "extensions": []
+    },
+    "php": {
+        "aliases": [
+            "PHP",
+            "php"
+        ],
+        "extensions": [
+            ".php",
+            ".php4",
+            ".php5",
+            ".phtml",
+            ".ctp"
+        ]
+    },
+    "postiats": {
+        "aliases": [
+            "ATS",
+            "ATS/Postiats"
+        ],
+        "extensions": [
+            ".dats",
+            ".sats",
+            ".hats"
+        ]
+    },
+    "powerquery": {
+        "aliases": [
+            "PQ",
+            "M",
+            "Power Query",
+            "Power Query M"
+        ],
+        "extensions": [
+            ".pq",
+            ".pqm"
+        ]
+    },
+    "powershell": {
+        "aliases": [
+            "PowerShell",
+            "powershell",
+            "ps",
+            "ps1"
+        ],
+        "extensions": [
+            ".ps1",
+            ".psm1",
+            ".psd1"
+        ]
+    },
+    "pug": {
+        "aliases": [
+            "Pug",
+            "Jade",
+            "jade"
+        ],
+        "extensions": [
+            ".jade",
+            ".pug"
+        ]
+    },
+    "python": {
+        "aliases": [
+            "Python",
+            "py"
+        ],
+        "extensions": [
+            ".py",
+            ".rpy",
+            ".pyw",
+            ".cpy",
+            ".gyp",
+            ".gypi"
+        ]
+    },
+    "r": {
+        "aliases": [
+            "R",
+            "r"
+        ],
+        "extensions": [
+            ".r",
+            ".rhistory",
+            ".rprofile",
+            ".rt"
+        ]
+    },
+    "razor": {
+        "aliases": [
+            "Razor",
+            "razor"
+        ],
+        "extensions": [
+            ".cshtml"
+        ]
+    },
+    "redis": {
+        "aliases": [
+            "redis"
+        ],
+        "extensions": [
+            ".redis"
+        ]
+    },
+    "redshift": {
+        "aliases": [
+            "Redshift",
+            "redshift"
+        ],
+        "extensions": []
+    },
+    "restructuredtext": {
+        "aliases": [
+            "reStructuredText",
+            "restructuredtext"
+        ],
+        "extensions": [
+            ".rst"
+        ]
+    },
+    "ruby": {
+        "aliases": [
+            "Ruby",
+            "rb"
+        ],
+        "extensions": [
+            ".rb",
+            ".rbx",
+            ".rjs",
+            ".gemspec",
+            ".pp"
+        ]
+    },
+    "rust": {
+        "aliases": [
+            "Rust",
+            "rust"
+        ],
+        "extensions": [
+            ".rs",
+            ".rlib"
+        ]
+    },
+    "sb": {
+        "aliases": [
+            "Small Basic",
+            "sb"
+        ],
+        "extensions": [
+            ".sb"
+        ]
+    },
+    "scheme": {
+        "aliases": [
+            "scheme",
+            "Scheme"
+        ],
+        "extensions": [
+            ".scm",
+            ".ss",
+            ".sch",
+            ".rkt"
+        ]
+    },
+    "scss": {
+        "aliases": [
+            "Sass",
+            "sass",
+            "scss"
+        ],
+        "extensions": [
+            ".scss"
+        ]
+    },
+    "shell": {
+        "aliases": [
+            "Shell",
+            "sh"
+        ],
+        "extensions": [
+            ".sh",
+            ".bash"
+        ]
+    },
+    "sol": {
+        "aliases": [
+            "sol",
+            "solidity",
+            "Solidity"
+        ],
+        "extensions": [
+            ".sol"
+        ]
+    },
+    "aes": {
+        "aliases": [
+            "aes",
+            "sophia",
+            "Sophia"
+        ],
+        "extensions": [
+            ".aes"
+        ]
+    },
+    "sql": {
+        "aliases": [
+            "SQL"
+        ],
+        "extensions": [
+            ".sql"
+        ]
+    },
+    "st": {
+        "aliases": [
+            "StructuredText",
+            "scl",
+            "stl"
+        ],
+        "extensions": [
+            ".st",
+            ".iecst",
+            ".iecplc",
+            ".lc3lib"
+        ]
+    },
+    "swift": {
+        "aliases": [
+            "Swift",
+            "swift"
+        ],
+        "extensions": [
+            ".swift"
+        ]
+    },
+    "tcl": {
+        "aliases": [
+            "tcl",
+            "Tcl",
+            "tcltk",
+            "TclTk",
+            "tcl/tk",
+            "Tcl/Tk"
+        ],
+        "extensions": [
+            ".tcl"
+        ]
+    },
+    "twig": {
+        "aliases": [
+            "Twig",
+            "twig"
+        ],
+        "extensions": [
+            ".twig"
+        ]
+    },
+    "typescript": {
+        "aliases": [
+            "TypeScript",
+            "ts",
+            "typescript"
+        ],
+        "extensions": [
+            ".ts",
+            ".tsx"
+        ]
+    },
+    "vb": {
+        "aliases": [
+            "Visual Basic",
+            "vb"
+        ],
+        "extensions": [
+            ".vb"
+        ]
+    },
+    "xml": {
+        "aliases": [
+            "XML",
+            "xml"
+        ],
+        "extensions": [
+            ".xml",
+            ".dtd",
+            ".ascx",
+            ".csproj",
+            ".config",
+            ".wxi",
+            ".wxl",
+            ".wxs",
+            ".xaml",
+            ".svg",
+            ".svgz",
+            ".opf",
+            ".xsl"
+        ]
+    },
+    "yaml": {
+        "aliases": [
+            "YAML",
+            "yaml",
+            "YML",
+            "yml"
+        ],
+        "extensions": [
+            ".yaml",
+            ".yml"
+        ]
+    }
+}

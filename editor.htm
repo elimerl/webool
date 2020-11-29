@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{FileName}}</title>
+    <link rel="stylesheet" data-name="vs/editor/editor.main"
+        href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/editor/editor.main.min.css">
+    <script type="text/javascript" src="https://unpkg.com/monaco-themes/dist/monaco-themes.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body style="height: 100%; margin: 0;overflow: hidden;">
+    <div id="container" style="height:100vh;border:1px solid black;">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/loader.min.js"></script>
+        <script>
+            // Based on https://jsfiddle.net/developit/bwgkr6uq/ which just works but is based on unpkg.com.
+            // Provided by loader.min.js.
+            require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs' } });
+            window.MonacoEnvironment = { getWorkerUrl: () => proxy };
+            let proxy = URL.createObjectURL(new Blob([`
+    self.MonacoEnvironment = {
+        baseUrl: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min'
+    };
+    importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/base/worker/workerMain.min.js');
+`], { type: 'text/javascript' }));
+            const socket = io('/edit')
+            socket.emit('editing', window.location.pathname)
+            let save;
+            async function postData(url = '', data = {}) {
+                // Default options are marked with *
+                const response = await fetch(url, {
+                    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                    mode: 'cors', // no-cors, *cors, same-origin
+                    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: 'same-origin', // include, *same-origin, omit
+                    headers: {
+                        'Content-Type': 'application/json'
+                        // 'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    redirect: 'follow', // manual, *follow, error
+                    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                    body: JSON.stringify(data) // body data type must match "Content-Type" header
+                });
+                return response.json(); // parses JSON response into native JavaScript objects
+            }
+            require(["vs/editor/editor.main"], function () {
+                `{{LoadTypings}}`
+                let editor = monaco.editor.create(document.getElementById('container'), {
+                    value: `Loading file... Please wait`,
+                    language: '{{FileLang}}',
+                    theme: 'vs-dark',
+                    automaticLayout: true
+                });
+                fetch(window.location.pathname.replace('/files', '/raw')).then(response => response.text()).then((data) => {
+                    if (data !== editor.getValue()) {
+                        console.log("New data from remote")
+                        const pos = editor.getPosition()
+                        editor.setValue(data)
+                        editor.setPosition(pos)
+                    }
+                })
+                save = () => {
+                    socket.emit('edit', { path: window.location.pathname, content: editor.getValue() })
+                }
+                editor.onDidChangeModelContent((event) => {
+                    save();
+                });
+                socket.on('changed', () => {
+                    fetch(window.location.pathname.replace('/files', '/raw')).then(response => response.text()).then((data) => {
+                        if (data !== editor.getValue()) {
+                            console.log("New data from remote")
+                            const pos = editor.getPosition()
+                            editor.setValue(data)
+                            editor.setPosition(pos)
+                        }
+                    })
+                })
+                window.onresize = () => {
+                    editor.layout()
+                }
+            });
+        </script>
+</body>
+
+</html>
